@@ -24,6 +24,26 @@
     background-color: lightgreen;	
 }
     </style>
+    	<script>
+      var currentImageIndex = 0;
+
+      var images = [							
+        "https://assets.ischool.uw.edu/ai/kdavis78/pci/kdavis78-1.jpg",
+        "https://assets.ischool.uw.edu/ai/batya/pci/batya-1.jpg",
+        "https://assets.ischool.uw.edu/ai/jhullman/pci/jhullman-1.jpg",
+        "https://assets.ischool.uw.edu/ai/ajko/pci/ajko-1.jpg"
+      ];
+			function updateImage() {
+				var image = document.getElementById("currentImage");
+				image.src = images[currentImageIndex];
+        
+        currentImageIndex = currentImageIndex + 1;
+        if(currentImageIndex >= images.length)
+        	currentImageIndex = 0;
+			}
+            setInterval(updateImage, 1000);
+      
+		</script>
 </head>
 
 <body>
@@ -94,6 +114,8 @@
        		       </div>
        	      </div>
          </div>
+         
+         <img id="currentImage" />
          
 </body>
 </html>
