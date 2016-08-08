@@ -17,6 +17,8 @@
 			function updateImage() {
 				var image = document.getElementById("currentImage");
 				image.src = images[currentImageIndex];
+				var width = img.clientWidth;
+                                var height = img.clientHeight;
         
         currentImageIndex = currentImageIndex + 1;
         if(currentImageIndex >= images.length)
@@ -62,7 +64,7 @@ body {
 .first{
     width: 500px;
     padding: 10px;
-    border: 5px solid #1a001a;
+    border: 5px solid silver;
     margin: 10;
     background-color: #ff8c66;	
 }
@@ -73,20 +75,20 @@ body {
     margin:10;
     background-color: #ff8c66;
 }
+#currentimage {
+	padding:1px;
+}
    
 	 </style>
 	</head>
 
 <body> 
-<div>
-	<img id="currentImage" /> 
-</div>
-	
-	<div class="top">
-	</div>
 	<div class="ethiopia"> 
 		 ETHIOPIA 
 	</div>
+	<div>
+	       <img id="currentImage" /> 
+        </div>
 	
 	<div class="container">
 		<div class="row">
