@@ -7,6 +7,24 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
  <script>
  	
+      var currentImageIndex = 0;
+      var images = [							
+        "http://www.travel-pictures-gallery.com/images/south-ethiopia/south-ethiopia-0016.jpg",
+        "http://ceoworld.biz/wp-content/uploads/2014/08/Karo-People-24-Ethiopia.jpg",
+        "http://www.planetstillalive.com/wp-content/uploads/2012/11/country-life-3-13-1024x680.jpg",
+        "http://i.dailymail.co.uk/i/pix/2014/02/12/article-2555821-1B5A59E200000578-574_964x661.jpg"
+      ];
+			function updateImage() {
+				var image = document.getElementById("currentImage");
+				image.src = images[currentImageIndex];
+        
+        currentImageIndex = currentImageIndex + 1;
+        if(currentImageIndex >= images.length)
+        	currentImageIndex = 0;
+			}
+            setInterval(updateImage, 1000);
+      
+	
  </script>
  	<style>
 
@@ -60,6 +78,9 @@ body {
 	</head>
 
 <body> 
+<div>
+	<img id="currentImage" /> 
+</div>
 	
 	<div class="top">
 	</div>
