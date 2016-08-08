@@ -6,7 +6,6 @@
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
  <script>
- 	
       var currentImageIndex = 0;
       var images = [							
         "http://www.travel-pictures-gallery.com/images/south-ethiopia/south-ethiopia-0016.jpg",
@@ -17,14 +16,14 @@
 			function updateImage() {
 				var image = document.getElementById("currentImage");
 				image.src = images[currentImageIndex];
-			
-                                
-                                if(currentImageIndex >= images.length)
-        	                currentImageIndex = 0;
-		         	}
-		         	
-                           setInterval(updateImage, 1000);
-     </script>
+        
+        currentImageIndex = currentImageIndex + 1;
+        if(currentImageIndex >= images.length)
+        	currentImageIndex = 0;
+			}
+            setInterval(updateImage, 1000);
+      
+        </script>
  	<style>
 
 .col-md-1 { 
