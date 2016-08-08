@@ -14,7 +14,7 @@
         "http://i.dailymail.co.uk/i/pix/2014/02/12/article-2555821-1B5A59E200000578-574_964x661.jpg"
       ];
 			function updateImage() {
-				var image = document.getElementById("currentImage");
+				var image = document.getElementById("currentImage").width = "300";
 				image.src = images[currentImageIndex];
         
         currentImageIndex = currentImageIndex + 1;
@@ -22,6 +22,7 @@
         	currentImageIndex = 0;
 			}
             setInterval(updateImage, 1000);
+            
       
         </script>
  	<style>
@@ -71,7 +72,7 @@ body {
     margin:10;
     background-color: #f08080;
 }
-#currentimg
+
 	 </style>
 	</head>
 
